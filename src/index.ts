@@ -128,6 +128,13 @@ export class Toolkit<I extends InputType = InputType, O extends OutputType = Out
     // Memoize the GitHub API token
     this.token = opts.token || this.inputs.github_token || process.env.GITHUB_TOKEN as string
 
+    // Memoize our Proxy instance
+    this.inputs = createInputProxy<I>()
+    this.outputs = createOutputProxy<O>()
+
+    // Memoize the GitHub API token
+    this.token = opts.token || this.inputs.github_token || process.env.GITHUB_TOKEN as string
+
     // Setup nested objects
     this.exit = new Exit(this.log)
     this.context = new Context()

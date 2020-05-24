@@ -50,7 +50,7 @@ This will create a new folder `my-cool-action` with the following files:
 * [Output information from your action](#toolsoutputs)
 * [Slash commands](#toolscommandcommand-args-match--promise)
 * [Reading files](#toolsreadfilepath-encoding--utf8)
-* [Run a CLI command](#toolsruninworkspacecommand-args-execaoptions)
+* [Run a CLI command](#toolsexec)
 * [End the action's process](#toolsexit)
 * [Inspect the webhook event payload](#toolscontext)
 
