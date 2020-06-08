@@ -73,9 +73,8 @@ export class Context {
   public get issue () {
     const payload = this.payload
 
-    return {
-      ...this.repo,
-      number: (payload.issue || payload.pull_request || payload).number
+    const data: { [k: string]: any } = {
+      ...this.repo
     }
 
     if (payload.issue) {
